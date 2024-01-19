@@ -22,10 +22,10 @@ Visit http://localhost:3000 in your browser.
 ## Tech Stack
 
 ### Frontend:
-React.js
-React Router
+React.js  
+React Router  
 
 ### Backend:
-Node.js
-Express.js
-MongoDB Compass (Database Management)
+Node.js  
+Express.js  
+MongoDB Compass (Database Management)  

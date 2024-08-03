@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 client side code files
-=======
 ### Pawfect Companions - Pet Adoption Platform  
 Quick Start !!
 
@@ -32,4 +30,3 @@ React Router
 Node.js  
 Express.js  
 MongoDB Compass (Database Management)  
->>>>>>> a2d637e0e5fd9c456ac4958b7cacba07407226fd

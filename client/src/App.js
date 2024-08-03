@@ -13,6 +13,7 @@ import ApplicationForm from './components/ApplicationForm';
 import AddDogForm from './components/AddDogForm';
 import Adoptionform from "./components/Adoptionform";
 
+
 const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
@@ -46,12 +47,14 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/dogs" element={<Dog />} />
+          
           <Route path="/cats" element={<Cat />}/>
           <Route path="/others" element={<Other />}/>
         <Route path="/pet/:id" element={<PetDetails />} />
         <Route path="/applicationform" element={<ApplicationForm/>}/>
         <Route path="/adddogform" element={<AddDogForm/>}/>
         <Route path="/adoptionform" element={<Adoptionform/>}/>
+        
         </Routes>
       </AuthProvider>
     </Router>

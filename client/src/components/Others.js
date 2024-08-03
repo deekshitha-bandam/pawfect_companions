@@ -1,6 +1,6 @@
 // Others.js
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import OtherPets from './otherpets'; // Import the JSON file
 import PetDetails from './Petdetails';
 
@@ -31,13 +31,11 @@ const Others = () => {
         {othersData.map((other) => (
           <div key={other.id} style={{ width: '250px', margin: '10px', padding: '20px', border: '1px solid #ccc' }}>
             {/* Assuming that 'photos' is an array of objects, and we're using the first photo */}
-            <img src={other.photos[0]?.medium} alt={other.id} style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
-            <h3>{other.id}</h3>
-            <p>Type: {other.type}</p>
+            <img src={other.photos} alt={other.id} style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+            
             <p>Species: {other.species}</p>
             <p>Age: {other.age}</p>
-            {/* Updated Link to use "/others/${other.id}" */}
-            <Link to={`/others/${other.id}`}>See Details</Link>
+           
             <button onClick={() => handleOtherClick(other)}>Adopt</button>
           </div>
         ))}

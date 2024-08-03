@@ -57,13 +57,26 @@ app.post('/signup', async (req, res) => {
 
 // Endpoint to handle adoption applications
 app.post('/apply', async (req, res) => {
-  const { pet, applicantName, applicantEmail, applicantMessage } = req.body;
+  const {
+    pet,
+    applicantName,
+    applicantEmail,
+    applicantMessage,
+    firstName,
+    lastName,
+    city,
+    state,
+  } = req.body;
 
   const applicationData = {
     pet,
     applicantName,
     applicantEmail,
     applicantMessage,
+    firstName,
+    lastName,
+    city,
+    state,
   };
 
   try {

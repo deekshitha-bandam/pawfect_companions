@@ -17,7 +17,7 @@ const AdoptionForm = () => {
       <h2>Adoption Application Details</h2>
       {applicationDetails ? (
         <div>
-            <p> These are your appliation details</p>
+          <p>These are your application details:</p>
           <p>
             <strong>Name:</strong> {applicationDetails.applicantName}
           </p>
@@ -27,7 +27,7 @@ const AdoptionForm = () => {
           <p>
             <strong>Message:</strong> {applicationDetails.applicantMessage}
           </p>
-          <p>You will be soon informed about the adoption. Thank you for using our website.Explore more in our page.</p>
+          <p>You will be soon informed about the adoption. Thank you for using our website. Explore more on our page.</p>
         </div>
       ) : (
         <p>No application details found.</p>

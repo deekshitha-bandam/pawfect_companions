@@ -1,6 +1,6 @@
 // Dog.js
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Dogs from './output_pet.json'; // Import the JSON file directly
 import PetDetails from './Petdetails';
 
@@ -32,14 +32,13 @@ const Dog = () => {
         {dogsData.map((dog) => (
           <div key={dog.id} style={{ width: '250px', margin: '10px', padding: '20px', border: '1px solid #ccc' }}>
             {/* Assuming that 'photos' is an array of objects, and we're using the first photo */}
-            <img src={dog.photos[0]?.medium} alt={dog.id} style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
-            <h3>{dog.id}</h3>
-            <p>Type: {dog.type}</p>
+            <img src={dog.photos} alt={dog.id} style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+            
+            
             <p>Species: {dog.species}</p>
             <p>Breed: {dog.breeds}</p>
             <p>Age: {dog.age}</p>
-            {/* Updated Link to use "/dogs/${dog.id}" */}
-            <Link to={`/dogs/${dog.id}`}>See Details</Link>
+           
             <button onClick={() => handleDogClick(dog)}>Adopt</button>
           </div>
         ))}

@@ -1,6 +1,6 @@
 // Cat.js
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Cats from './output_pet_modified.json'; // Import the modified JSON file
 import PetDetails from './Petdetails';
 
@@ -31,14 +31,12 @@ const Cat = () => {
         {catsData.map((cat) => (
           <div key={cat.id} style={{ width: '250px', margin: '10px', padding: '20px', border: '1px solid #ccc' }}>
             {/* Assuming that 'photos' is an array of objects, and we're using the first photo */}
-            <img src={cat.photos[0]?.medium} alt={cat.id} style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
-            <h3>{cat.id}</h3>
-            <p>Type: {cat.type}</p>
+            <img src={cat.photos} alt={cat.id} style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+            
             <p>Species: {cat.species}</p>
             <p>Breed: {cat.breeds}</p>
             <p>Age: {cat.age}</p>
-            {/* Updated Link to use "/cats/${cat.id}" */}
-            <Link to={`/cats/${cat.id}`}>See Details</Link>
+            
             <button onClick={() => handleCatClick(cat)}>Adopt</button>
           </div>
         ))}

@@ -1,4 +1,4 @@
-client side code files
+
 ### Pawfect Companions - Pet Adoption Platform  
 Quick Start !!
 
